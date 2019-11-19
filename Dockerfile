@@ -23,7 +23,7 @@ RUN rm -rf apache-tomcat-9.0.27.tar.gz
 RUN cd apache-tomcat-9.0.27/
 RUN cd bin
 #RUN chmod +x starup.sh
-ENTRYPOINT /usr/bin/docker
+#ENTRYPOINT /usr/bin/docker
 #RUN ./startup.sh
 #ADD sample.war /usr/local/tomcat/webapps/
 EXPOSE 8080
