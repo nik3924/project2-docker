@@ -1,5 +1,5 @@
 # Centos based container with Java and Tomcat
-FROM centos7
+FROM centos:centos7
 MAINTAINER nikhil
 
 # Install prepare infrastructure
