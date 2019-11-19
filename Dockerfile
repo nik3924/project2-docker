@@ -8,7 +8,7 @@ RUN yum -y update && \
  yum -y install tar
  
 # Install Java
-RUN sudo yum install java-1.8.0-openjdk
+RUN sudo yum install java-1.8.0-openjdk-devel -y
 
 # Install Apache Maven
 RUN sudo yum install maven -y
