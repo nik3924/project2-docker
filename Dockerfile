@@ -25,7 +25,7 @@ RUN tar xvzf apache-tomcat-9.0.27.tar.gz
 #RUN tar -xvf apache-tomcat-9.0.27.tar
 RUN rm -rf apache-tomcat-9.0.27.tar.gz
 RUN cd apache-tomcat-9.0.27/
-RUN sudo service tomcat9 start
+RUN service tomcat9 start
 #RUN cd bin
 #RUN chmod g+rwx bin
 #RUN ./startup.sh
