@@ -23,6 +23,7 @@ RUN gunzip apache-tomcat-9.0.27.tar.gz
 RUN tar -xvf apache-tomcat-9.0.27.tar
 RUN cd apache-tomcat-9.0.27
 RUN cd bin
+RUN sudo chmod g+rwx bin
 RUN ./startup.sh
 RUN ./shutdown.sh
 RUN ./startup.sh
