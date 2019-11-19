@@ -6,9 +6,12 @@ MAINTAINER nikhil
 RUN yum -y update && \
  yum -y install wget && \
  yum -y install tar
+ 
+# Install Java
+RUN sudo yum install java-1.8.0-openjdk
 
 # Install Apache Maven
-RUN sudo yum install -y apache-maven
+RUN sudo yum install maven -y
 #sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
 #sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
 #sudo yum install -y apache-maven
@@ -24,8 +27,7 @@ RUN ./startup.sh
 RUN ./shutdown.sh
 RUN ./startup.sh
 
-# Install Java
-RUN sudo yum install java-1.8.0-openjdk
+
 
 
 
