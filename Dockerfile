@@ -27,5 +27,5 @@ RUN cd bin
 #RUN ./startup.sh
 #ADD sample.war /usr/local/tomcat/webapps/
 EXPOSE 8080
-RUN chmod +x catalina.sh
+#RUN chmod +x catalina.sh
 CMD ["catalina.sh", "run"]
