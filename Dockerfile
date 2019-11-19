@@ -22,7 +22,9 @@ RUN tar xvzf apache-tomcat-9.0.27.tar.gz
 RUN rm -rf apache-tomcat-9.0.27.tar.gz
 RUN cd apache-tomcat-9.0.27/
 RUN cd bin
-RUN chmod +x .starup.sh
+RUN chmod +x .starup.sh#ENTRYPOINT .startup.sh
+#RUN ./startup.sh
+#ADD sample.war /usr/local/tomcat/webapps/
 EXPOSE 8080
 RUN chmod +x catalina.sh
 CMD ["catalina.sh", "run"]
