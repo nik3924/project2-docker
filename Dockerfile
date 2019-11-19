@@ -18,15 +18,18 @@ RUN yum install maven -y
 #mvn --version
 
 # Install Apache TOMCAT
-RUN wget http://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.27/bin/apache-tomcat-9.0.27.tar.gz
-RUN gunzip apache-tomcat-9.0.27.tar.gz
-RUN tar -xvf apache-tomcat-9.0.27.tar
-RUN cd apache-tomcat-9.0.27
+RUN wget https://www-us.apache.org/dist/tomcat/tomcat-9/v9.0.27/bin/apache-tomcat-9.0.27.tar.gz
+#RUN wget http://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.27/bin/apache-tomcat-9.0.27.tar.gz
+#RUN gunzip apache-tomcat-9.0.27.tar.gz
+RUN tar xvzf apache-tomcat-9.0.27.tar.gz
+#RUN tar -xvf apache-tomcat-9.0.27.tar
+RUN rm -rf apache-tomcat-9.0.27.tar.gz
+RUN cd apache-tomcat-9.0.27/
 RUN cd bin
-RUN chmod g+rwx bin
+#RUN chmod g+rwx bin
 RUN ./startup.sh
-RUN ./shutdown.sh
-RUN ./startup.sh
+#RUN ./shutdown.sh
+#RUN ./startup.sh
 
 
 
