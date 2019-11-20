@@ -29,3 +29,7 @@ RUN cd bin
 EXPOSE 8080
 #RUN chmod +x catalina.sh
 CMD ["catalina.sh", "run"]
+
+#Include the environment variables
+DOCKER_USERNAME: nik3924
+DOCKER_PASSWORD: $aeiou$N1
